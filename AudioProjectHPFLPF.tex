@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath} 
+\usepackage{comment}
+
+\title{Audio Project Process}
+\author{Heally Cruz}
+\date{Summer 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Design Requirements and Formulas}
+
+A percent error of less than $5\%$ is always required.
+
+\subsection{Formulas for an Active High-Pass Filter}
+
+\begin{align}
+f_c &= \frac{1}{{2\pi R_1 C_1}} \\[10pt]
+\end{align}
+
+\begin{align}
+A_{max} &= \frac{R_2}{{R_1}} \\[10pt]
+\end{align}
+
+where:
+\begin{itemize}
+    \item $f_c$ is the cutoff frequency
+    \item $A_{max}$ is the maximum voltage gain of the high-pass filter
+    \item $R_1$, $R_2$, are the resistor values
+    \item $C_1$ is the capacitor value
+    %as seen in figure
+\end{itemize}
+
+\subsection{Formulas for an Active Low-Pass Filter}
+
+\begin{align}
+f_c &= \frac{1}{{2\pi R_2 C_1}} \\[10pt]
+\end{align}
+
+\begin{align}
+A_{max} &= \frac{R_2}{{R_1}} \\[10pt]
+\end{align}
+
+where:
+\begin{itemize}
+    \item $f_c$ is the cutoff frequency
+    \item $A_{max}$ is the maximum voltage gain of the high-pass filter
+    \item $R_1$, $R_2$, are the resistor values
+    \item $C_1$ is the capacitor value
+    %as seen in figure
+\end{itemize}
+
+\section{HPF Design}
+
+%160 hz note = e3 = 164.8 = low bass = f_cLPF
+
+Goal = 200 Hz\\
+From formula 1.1: \\\\
+$f_{HPF} = \frac{1}{{2 \pi R1 C1}} = 200$\\[10pt]
+$2 \pi R1 C1 = 1/200$\\
+R1 = 24k, C1 = 0.033uF\\
+percent error 0.4766\%\\
+
+%fc2G3 = 1/(2pi * R2 * C2) = 260
+%2pi*R2*C2 = 1/260
+%R2 = 18kohm, C2 = 0.033uF
+%percent error 2.96248611592 \%
+
+\section{LPF Design}
+Goal = 160 Hz\\
+From formula 1.2: \\\\
+$f_{LPF} = \frac{1}{{2 \pi R2 C1}} = 160$\\[10pt]
+$2 \pi R2 C1 = 1/160$\\
+R2 = 10k, C1 = 0.1uF\\
+percent error 0.5282\%\\
+
+\begin{comment}
+\section{figures}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Spectrogram.png}
+    \caption{spectrogram of G3+G4 audio}
+    \label{fig:placeholder}
+\end{figure}
+\end{comment}
+
+\end{document}
