@@ -3,7 +3,6 @@ current steps
  - block diagram ✔️
  - falstad sim ✔️
  - ltspice sim ⏳
- - BOM and parts ordering ⏳
  - breadboarding
  - kicad PCB
 
