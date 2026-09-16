@@ -2,8 +2,7 @@
 current steps  
  - block diagram ✔️
  - falstad sim ✔️
- - ltspice sim ⏳
-<!-- - breadboarding -->
+ - ltspice sim ⏳ <!-- - breadboarding -->
  - kicad PCB ⏳
 
 process and calculations being maintained in latex
